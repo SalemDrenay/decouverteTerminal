@@ -1,0 +1,105 @@
+salemdrenay@salemdrenay-Lenovo-G50-80:~$ sudo apt-get install -y curl unzip
+[sudo] password for salemdrenay: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+unzip is already the newest version (6.0-25ubuntu1).
+unzip set to manually installed.
+The following NEW packages will be installed:
+  curl libcurl4
+0 upgraded, 2 newly installed, 0 to remove and 119 not upgraded.
+Need to get 394 kB of archives.
+After this operation, 1 115 kB of additional disk space will be used.
+Get:1 http://fr.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.2 [233 kB]
+Get:2 http://fr.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.2 [161 kB]
+Fetched 394 kB in 5s (75,6 kB/s)
+Selecting previously unselected package libcurl4:amd64.
+(Reading database ... 123353 files and directories currently installed.)
+Preparing to unpack .../libcurl4_7.68.0-1ubuntu2.2_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.2) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.68.0-1ubuntu2.2_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.2) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.2) ...
+Setting up curl (7.68.0-1ubuntu2.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+salemdrenay@salemdrenay-Lenovo-G50-80:~$ cd quests/shell
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell$ curl -L -o planets.zip curl -L -o planets.zip "https://github.com/WildCodeSchool/quests-resources/blob/master/terminal/planets.zip?raw=true"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: curl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   148  100   148    0     0   1156      0 --:--:-- --:--:-- --:--:--  1156
+100   159  100   159    0     0   1012      0 --:--:-- --:--:-- --:--:--  1012
+100  293k  100  293k    0     0   922k      0 --:--:-- --:--:-- --:--:-- 3575k
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell$ unzip -L -o planets.zip
+Archive:  planets.zip
+   creating: planets/
+  inflating: planets/mercury.jpeg    
+  inflating: planets/earth.jpeg      
+  inflating: planets/pluto.jpeg      
+  inflating: planets/arrakis.jpeg    
+  inflating: planets/jupiter.jpeg    
+  inflating: planets/venus.jpeg      
+  inflating: planets/mars.jpeg       
+  inflating: planets/cybertron.jpeg  
+  inflating: planets/coruscant.jpeg  
+  inflating: planets/uranus.jpeg     
+  inflating: planets/neptune.jpeg    
+  inflating: planets/saturn.jpeg     
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell$ mkdir -p réelles fictives habitées
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell$ mv réelles fictives habitées planets/
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell$ mkdir -p planets/réelles/terrestres planets/réelles/géantes-gazeuses planets/réelles/planètes-naines
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell$ cd planets
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ find
+.
+./arrakis.jpeg
+./habitées
+./venus.jpeg
+./uranus.jpeg
+./saturn.jpeg
+./réelles
+./réelles/terrestres
+./réelles/géantes-gazeuses
+./réelles/planètes-naines
+./fictives
+./cybertron.jpeg
+./neptune.jpeg
+./earth.jpeg
+./jupiter.jpeg
+./pluto.jpeg
+./mars.jpeg
+./coruscant.jpeg
+./mercury.jpeg
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ mv venus.jpeg earth.jpeg mars.jpeg mercury.jpeg réelles/terrestres
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ mv uranus.jpeg saturn.jpeg neptune.jpeg jupiter.jpeg réelles/géantes-gazeuses
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ mv pluto.jpeg réelles/planètes-naines
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ mv arrakis.jpeg cybertron.jpeg coruscant.jpeg fictives/
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ cp réelles/terrestres/earth.jpeg habitées/
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ cp fictives/* habitées/
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ rm -r réelles/planètes-naines
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ find
+.
+./habitées
+./habitées/arrakis.jpeg
+./habitées/cybertron.jpeg
+./habitées/earth.jpeg
+./habitées/coruscant.jpeg
+./réelles
+./réelles/terrestres
+./réelles/terrestres/venus.jpeg
+./réelles/terrestres/earth.jpeg
+./réelles/terrestres/mars.jpeg
+./réelles/terrestres/mercury.jpeg
+./réelles/géantes-gazeuses
+./réelles/géantes-gazeuses/uranus.jpeg
+./réelles/géantes-gazeuses/saturn.jpeg
+./réelles/géantes-gazeuses/neptune.jpeg
+./réelles/géantes-gazeuses/jupiter.jpeg
+./fictives
+./fictives/arrakis.jpeg
+./fictives/cybertron.jpeg
+./fictives/coruscant.jpeg
+salemdrenay@salemdrenay-Lenovo-G50-80:~/quests/shell/planets$ 
